@@ -1,0 +1,505 @@
+classloader=dalvik.system.PathClassLoader[DexPathList[[zip file "/data/app/~~o07XV3DGF7PtqIAJFUYetg==/com.zjwh.android_wh_physicalfitness-aqJGqC1CAJS1vTaKd3L4HA==/base.apk", dex file "InMemoryDexFile[cookie=[0, 127202335927568]]", dex file "InMemoryDexFile[cookie=[0, 127202335930928]]", dex file "InMemoryDexFile[cookie=[0, 127202335934736]]", dex file "InMemoryDexFile[cookie=[0, 127202336094672]]", dex file "InMemoryDexFile[cookie=[0, 127202336093552]]", dex file "InMemoryDexFile[cookie=[0, 127202336090416]]", dex file "InMemoryDexFile[cookie=[0, 127202336090640]]", dex file "InMemoryDexFile[cookie=[0, 127202336097584]]"],nativeLibraryDirectories=[/data/app/~~o07XV3DGF7PtqIAJFUYetg==/com.zjwh.android_wh_physicalfitness-aqJGqC1CAJS1vTaKd3L4HA==/lib/arm64, /data/app/~~o07XV3DGF7PtqIAJFUYetg==/com.zjwh.android_wh_physicalfitness-aqJGqC1CAJS1vTaKd3L4HA==/base.apk!/lib/arm64-v8a, /system/lib64, /system/product/lib64, /vendor/lib64, /vendor/lib64/hw]]]
+
+== com.zjwh.android_wh_physicalfitness.advertise.AdManager super=class java.lang.Object
+  m public static checkCanLoad$default(AdManager,AdPosition,boolean,int,Object) -> boolean
+  m public static isSlotAllowed$default(AdManager,List,int,int,int,Object) -> boolean
+  m public static loadInteraction$default(AdManager,AdPosition,Activity,Integer,int,Object) -> void
+  m private final printKwadStack(String) -> void
+  m public static requestAdConfig$default(AdManager,boolean,int,Object) -> void
+  m private final updateFeedTime() -> void
+  m public final checkCanLoad(AdPosition,boolean) -> boolean
+  m public final fixHomeCollision(AdPosition) -> void
+  m public final getInteractionIsShow() -> boolean
+  m public final init(Context) -> void
+  m public final isSlotAllowed(List,int,int) -> boolean
+  m public final loadInteraction(AdPosition,Activity,Integer) -> void
+  m public final loadRunHistoryAd(AdPosition,Activity) -> void
+  m public final loadSplash(Context,int,AdPosition,ViewGroup,IAdCallback) -> void
+  m public onAdClicked(AdPosition,int,String,Long,Long,Integer) -> void
+  m public onAdDismiss(AdPosition,int,String,Long,Long,Integer) -> void
+  m public onAdExposed(AdPosition,int,String,Long,Long,Integer) -> void
+  m public onAdOff(AdPosition,int,Long,Long,Integer) -> void
+  m public onAdTimeNot(AdPosition,int,Long,Long,Integer) -> void
+  m public onRenderFailed(AdPosition,String,int,String,Long,Long,Integer) -> void
+  m public onRenderSucceeded(AdPosition,int,String,Long,Long,Integer) -> void
+  m public onRequestFailed(AdPosition,String,int,String,Long,Long,Integer) -> void
+  m public onRequestSucceeded(AdPosition,int,String,Long,Long,Integer) -> void
+  m public final requestAdConfig(boolean) -> void
+  m public final setInteractionIsShow(boolean) -> void
+  m public final updateLoadTime(AdPosition) -> void
+  f COLD_HOT_COLD : int
+  f COLD_HOT_HOT : int
+  f COLD_HOT_NONE : int
+  f INSTANCE : AdManager
+  f PRIVACY_INIT_TAG : String
+  f SLOT_TYPE_FLOAT : int
+  f SLOT_TYPE_HOME_FEED : int
+  f SLOT_TYPE_HOME_INTERSTITIAL : int
+  f SLOT_TYPE_MINE_FEED : int
+  f SLOT_TYPE_RUN_END : int
+  f SLOT_TYPE_RUN_END_FEED : int
+  f SLOT_TYPE_SPLASH : int
+  f SLOT_TYPE_TIANMU : int
+  f SLOT_TYPE_XYZ : int
+  f SLOT_TYPE_YUEDONG : int
+  f adType : String
+  f advertiseControl : AdvertiseControl
+  f interactionIsShow : boolean
+
+== com.zjwh.android_wh_physicalfitness.advertise.AdvertiseControl super=class java.lang.Object
+  m public static final access$getScope$p(AdvertiseControl) -> o00000O0
+  m private final getColdSplashTimestamp() -> long
+  m private final getHomeHostTimestamp() -> long
+  m private final getHomeInformationTimestamp() -> long
+  m private final getHotSplashTimestamp() -> long
+  m private final getMineTimestamp() -> long
+  m public static requestAdConfig$default(AdvertiseControl,boolean,int,Object) -> void
+  m private final resolveMaxInterval(List,long) -> Long
+  m private final setColdSplashTimestamp(long) -> void
+  m private final setHomeHostTimestamp(long) -> void
+  m private final setHomeInformationTimestamp(long) -> void
+  m private final setHotSplashTimestamp(long) -> void
+  m private final setMineTimestamp(long) -> void
+  m public final applyAdMatchConfig(List) -> void
+  m public final canLoadColdSplash() -> boolean
+  m public final canLoadHostHome() -> boolean
+  m public final canLoadHotSplash() -> boolean
+  m public final canLoadInformationHome() -> boolean
+  m public final canLoadMine() -> boolean
+  m public final canLoadReverseHome() -> boolean
+  m public final getPlatformDecorationEffective() -> void
+  m public final requestAdConfig(boolean) -> void
+  m public final setColdSplashTime(long) -> void
+  m public final setHostHomeTimestamp(long) -> void
+  m public final setHotSplashTime(long) -> void
+  m public final setInformationHomeTime(long) -> void
+  m public final setMineTime(long) -> void
+  m public final setReverseHomeTime(long) -> void
+  f scope : o00000O0
+  f spf : SharedPreferences
+
+== com.zjwh.android_wh_physicalfitness.advertise.AdConstant super=class java.lang.Object
+  m public final getLoadHomeHotStartAdTime() -> long
+  m public final isHostIntent() -> boolean
+  m public final isNewIntent() -> boolean
+  m public final setHostIntent(boolean) -> void
+  m public final setLoadHomeHotStartAdTime(long) -> void
+  m public final setNewIntent(boolean) -> void
+  f AD_INTERSTITIAL : String
+  f INSTANCE : AdConstant
+  f isHostIntent : boolean
+  f isNewIntent : boolean
+  f loadHomeHotStartAdTime : long
+
+== com.zjwh.android_wh_physicalfitness.advertise.AdPosition super=class java.lang.Enum
+  m private static final $values() -> AdPosition[]
+  m public static getEntries() -> OooO00o
+  m public static valueOf(String) -> AdPosition
+  m public static values() -> AdPosition[]
+  m public final getClickId() -> String
+  m public final getExposureId() -> String
+  m public final getModeId() -> int
+  m public final getRequestId() -> String
+  m public final getUmKey() -> String
+  m public final getUmValue() -> String
+  f clickId : String
+  f exposureId : String
+  f modeId : int
+  f requestId : String
+  f umKey : String
+  f umValue : String
+  f $ENTRIES : OooO00o
+  f $VALUES : AdPosition[]
+  f GAME_VIDEO_AD : AdPosition
+  f HOME_NATIVE_EXPRESS : AdPosition
+  f HOT_SPLASH : AdPosition
+  f INTERSTITIAL_HOME_HOST : AdPosition
+  f INTERSTITIAL_HOME_INFORMATION : AdPosition
+  f INTERSTITIAL_HOME_REVERSE : AdPosition
+  f INTERSTITIAL_MINE : AdPosition
+  f INTERSTITIAL_RUN_RECORD : AdPosition
+  f RUN_RECORD_NATIVE_EXPRESS : AdPosition
+  f SPLASH : AdPosition
+  f TIANMU_SUSPEND_AD : AdPosition
+  f YUEDONG_BANNER : AdPosition
+
+== com.zjwh.android_wh_physicalfitness.advertise.AdPlatformType super=class java.lang.Object
+  f ADGAIN : int
+  f BEIZI : int
+  f GUANGDIAN : int
+  f HONGMENG_JINGHONG : int
+  f INSTANCE : AdPlatformType
+  f LINGYE : int
+  f MEISHU : int
+  f TIANMU : int
+  f XYZ : int
+
+== com.zjwh.android_wh_physicalfitness.advertise.AdMatchStrategyResolver super=class java.lang.Object
+  m private final convertToMillis(long,int) -> long
+  m private final dominantAmongAllowed(List) -> AdUserMatchDTO
+  m public static isSlotBlockedByPolicy$default(AdMatchStrategyResolver,List,int,int,int,Object) -> boolean
+  m public static pvIdsForAd$default(AdMatchStrategyResolver,AdPosition,Mode,int,Object) -> AdPvTrackIds
+  m public final filteredStrategies(List,int,int) -> List
+  m public final intervalMillis(AdUserMatchDTO) -> long
+  m public final isSlotBlockedByPolicy(List,int,int) -> boolean
+  m public final pvIds(List,AdPosition,Mode) -> AdPvTrackIds
+  m public final pvIdsBestEffort(List,AdPosition) -> AdPvTrackIds
+  m public final pvIdsBestEffortForAd(AdPosition) -> AdPvTrackIds
+  m public final pvIdsBestEffortForEnterPage(int,String) -> AdPvTrackIds
+  m public final pvIdsBestEffortForSlot(List,int,int) -> AdPvTrackIds
+  m public final pvIdsForAd(AdPosition,Mode) -> AdPvTrackIds
+  m public final pvIdsForEnterPage(int,String) -> AdPvTrackIds
+  m public final pvIdsForSlot(List,int,int,Mode) -> AdPvTrackIds
+  m public final resolveDto(List,AdPosition,Mode) -> AdUserMatchDTO
+  m public final resolveDtoBestEffort(List,AdPosition) -> AdUserMatchDTO
+  m public final resolveDtoBestEffortForSlot(List,int,int) -> AdUserMatchDTO
+  m public final resolveDtoForSlot(List,int,int,Mode) -> AdUserMatchDTO
+  m public final slotAndColdForAd(AdPosition) -> Pair
+  m public final slotAndColdForEnterPage(int,String) -> Pair
+  f COLD_HOT_COLD : int
+  f COLD_HOT_HOT : int
+  f COLD_HOT_NONE : int
+  f INSTANCE : AdMatchStrategyResolver
+  f SLOT_HOME_FEED : int
+  f SLOT_HOME_INTERSTITIAL : int
+  f SLOT_MINE_FEED : int
+  f SLOT_RUN_END : int
+  f SLOT_RUN_END_FEED : int
+  f SLOT_SPLASH : int
+  f SLOT_TIANMU : int
+  f SLOT_XYZ : int
+  f SLOT_YUEDONG : int
+
+== com.zjwh.android_wh_physicalfitness.advertise.AdPvTrackIds super=class java.lang.Object
+  m public static copy$default(AdPvTrackIds,long,long,int,int,Object) -> AdPvTrackIds
+  m public final component1() -> long
+  m public final component2() -> long
+  m public final component3() -> int
+  m public final copy(long,long,int) -> AdPvTrackIds
+  m public equals(Object) -> boolean
+  m public final getCrowdId() -> long
+  m public final getMatchSourceType() -> int
+  m public final getStrategyId() -> long
+  m public hashCode() -> int
+  m public toString() -> String
+  f crowdId : long
+  f matchSourceType : int
+  f strategyId : long
+
+== com.zjwh.android_wh_physicalfitness.advertise.IAdRequestCallback super=null
+  m public abstract onRequestFailed(AdPosition,String,int,String,Long,Long,Integer) -> void
+  m public abstract onRequestSucceeded(AdPosition,int,String,Long,Long,Integer) -> void
+
+== com.zjwh.android_wh_physicalfitness.advertise.IAdRenderCallback super=null
+  m public abstract onRenderFailed(AdPosition,String,int,String,Long,Long,Integer) -> void
+  m public abstract onRenderSucceeded(AdPosition,int,String,Long,Long,Integer) -> void
+
+== com.zjwh.android_wh_physicalfitness.advertise.IAdDisplayCallback super=null
+  m public abstract onAdClicked(AdPosition,int,String,Long,Long,Integer) -> void
+  m public abstract onAdDismiss(AdPosition,int,String,Long,Long,Integer) -> void
+  m public abstract onAdExposed(AdPosition,int,String,Long,Long,Integer) -> void
+  m public abstract onAdOff(AdPosition,int,Long,Long,Integer) -> void
+  m public abstract onAdTimeNot(AdPosition,int,Long,Long,Integer) -> void
+
+== com.zjwh.android_wh_physicalfitness.advertise.IAdCallback super=null
+  m public abstract onAdClicked(AdPosition,int,String,Long,Long,Integer) -> void
+  m public abstract onAdDismiss(AdPosition,int,String,Long,Long,Integer) -> void
+  m public abstract onAdExposed(AdPosition,int,String,Long,Long,Integer) -> void
+  m public abstract onAdOff(AdPosition,int,Long,Long,Integer) -> void
+  m public abstract onAdTimeNot(AdPosition,int,Long,Long,Integer) -> void
+  m public abstract onRenderFailed(AdPosition,String,int,String,Long,Long,Integer) -> void
+  m public abstract onRenderSucceeded(AdPosition,int,String,Long,Long,Integer) -> void
+  m public abstract onRequestFailed(AdPosition,String,int,String,Long,Long,Integer) -> void
+  m public abstract onRequestSucceeded(AdPosition,int,String,Long,Long,Integer) -> void
+
+== com.zjwh.android_wh_physicalfitness.advertise.adgain.AdGainAdProvider super=class java.lang.Object
+  m public static OooO00o(Function1,Object) -> void
+  m public static final access$destroyDisplayed(AdGainAdProvider,PageAdSession) -> void
+  m public static final access$destroyLoading(AdGainAdProvider,PageAdSession) -> void
+  m public static final access$drainPendingLoads(AdGainAdProvider) -> void
+  m public static final access$getMainHandler$p() -> Handler
+  m public static final access$loadForPage(AdGainAdProvider,String,String,PageAdSession,Activity,long,Function1,Function0,Function0,Function0,Function0) -> void
+  m public static final access$postResult(AdGainAdProvider,Function1,Object) -> void
+  m public static final access$setSdkReady$p(boolean) -> void
+  m private final destroyDisplayed(PageAdSession) -> void
+  m private final destroyLoading(PageAdSession) -> void
+  m private final destroySession(PageAdSession) -> void
+  m private final drainPendingLoads() -> void
+  m private final loadForPage(String,String,PageAdSession,Activity,long,Function1,Function0,Function0,Function0,Function0) -> void
+  m private final postResult(Function1,Object) -> void
+  m private static final postResult$lambda$1(Function1,Object) -> void
+  m private final resolveShieldReason() -> String
+  m private final trackAdOff() -> void
+  m public final destroyHome() -> void
+  m public final destroySport() -> void
+  m public final init(Context) -> void
+  m public final isHomeDisplaying() -> boolean
+  m public final isHomeLoading() -> boolean
+  m public final isSportDisplaying() -> boolean
+  m public final isSportLoading() -> boolean
+  m public final loadHomeBannerNative(Activity,long,Function1,Function0,Function0,Function0) -> void
+  m public final loadSportBannerNative(Activity,long,Function1,Function0,Function0,Function0) -> void
+  m public final mustClearOnFailure(Throwable) -> boolean
+  m public final shouldSkipHomeReload() -> boolean
+  m public final shouldSkipSportReload() -> boolean
+  f APP_ID : String
+  f HOME_BANNER_EXPRESS_CODE_ID : String
+  f INSTANCE : AdGainAdProvider
+  f PRIVACY_INIT_TAG : String
+  f SPORT_BANNER_EXPRESS_CODE_ID : String
+  f homeSession : PageAdSession
+  f mainHandler : Handler
+  f pendingLoads : List
+  f sdkReady : boolean
+  f sportSession : PageAdSession
+
+== com.zjwh.android_wh_physicalfitness.advertise.guandian.GuandianAdProvider super=class java.lang.Object
+  m public static OooO00o(ViewGroup) -> void
+  m public static final access$getEasyNativeExpress$p() -> YFAdMixBannerAd
+  m private final closeAds() -> void
+  m private static final getAd$lambda$0(ViewGroup) -> void
+  m public final getAd(Context,ViewGroup) -> void
+  m public final getEasyRewardVideoAdLoading() -> boolean
+  m public final getFcAdSplash() -> YFAdSplashAds
+  m public final getInterstitialAdLoader1() -> YFAdInterstitialAds
+  m public final getInterstitialAdLoading() -> boolean
+  m public final getInterstitialAdShowing() -> boolean
+  m public final getSplashAdShow() -> boolean
+  m public final getSplashExposed() -> boolean
+  m public final getSplashSuccess() -> boolean
+  m public final getUserValue() -> HashMap
+  m public final init(Context) -> void
+  m public final loadInteraction(AdPosition,Activity,int,Long,Long,Integer,IAdCallback) -> void
+  m public final loadRunHistoryAd(AdPosition,Activity,int,Long,Long,Integer,IAdCallback) -> void
+  m public final loadSplash(Context,int,ViewGroup,AdPosition,int,Long,Long,Integer,IAdCallback) -> void
+  m public final loadVideoAd(Activity,String,Function2) -> void
+  m public final onActivityDestroyed() -> void
+  m public final setEasyRewardVideoAdLoading(boolean) -> void
+  m public final setExValue() -> HashMap
+  m public final setFcAdSplash(YFAdSplashAds) -> void
+  m public final setInterstitialAdLoader1(YFAdInterstitialAds) -> void
+  m public final setInterstitialAdLoading(boolean) -> void
+  m public final setInterstitialAdShowing(boolean) -> void
+  m public final setSplashAdShow(boolean) -> void
+  m public final setSplashExposed(boolean) -> void
+  m public final setSplashSuccess(boolean) -> void
+  m public final splashShowAd(Activity,ViewGroup,AdPosition) -> void
+  f INSTANCE : GuandianAdProvider
+  f PRIVACY_INIT_TAG : String
+  f easyNativeExpress : YFAdMixBannerAd
+  f easyRewardVideoAdLoading : boolean
+  f fcAdSplash : YFAdSplashAds
+  f interstitialAdLoader1 : YFAdInterstitialAds
+  f interstitialAdLoading : boolean
+  f interstitialAdShowing : boolean
+  f sdkIsInit : boolean
+  f splashAdShow : boolean
+  f splashExposed : boolean
+  f splashSuccess : boolean
+
+== com.zjwh.android_wh_physicalfitness.advertise.lingye.LingYeAdProvider super=class java.lang.Object
+  f INSTANCE : LingYeAdProvider
+  f TAG : String
+
+== com.zjwh.android_wh_physicalfitness.advertise.tianmu.TianMuAdProvider super=class java.lang.Object
+  m public static final access$getMSuspensionAd$p() -> SuspendAd
+  m public static final access$getTianmuAdPosition$p() -> AdPosition
+  m public static final access$setMSuspensionAd$p(SuspendAd) -> void
+  m public static getSuspendAd$default(TianMuAdProvider,Context,ViewGroup,Function0,int,Object) -> void
+  m private final getTIANMU_AD_UNIT_ID() -> String
+  m public final getSuspendAd(Context,ViewGroup,Function0) -> void
+  m public final init(Context) -> void
+  m public final onPause() -> void
+  m public final onResume() -> void
+  m public final releaseAd() -> void
+  f INSTANCE : TianMuAdProvider
+  f TIANMU_AD_UNIT_ID$delegate : OooOO0
+  f mSuspensionAd : SuspendAd
+  f tianmuAdPosition : AdPosition
+
+== com.zjwh.android_wh_physicalfitness.advertise.xyz.XyzAdProvider super=class java.lang.Object
+  m public final getAd(Context,ViewGroup,boolean) -> void
+  m public final init() -> void
+  f INSTANCE : XyzAdProvider
+
+== com.zjwh.android_wh_physicalfitness.advertise.banner.BannerSlide super=class java.lang.Object
+
+== com.zjwh.android_wh_physicalfitness.advertise.banner.BannerSlideComposer super=class java.lang.Object
+  m public final compose(List,SdkNativeAdPayload,List) -> List
+  m public final isCompletelyEmpty(List,SdkNativeAdPayload,List,boolean) -> boolean
+  f INSTANCE : BannerSlideComposer
+
+== com.zjwh.android_wh_physicalfitness.advertise.banner.SdkNativeAdPayload super=class java.lang.Object
+  m public static copy$default(SdkNativeAdPayload,View,int,String,Function0,int,Object) -> SdkNativeAdPayload
+  m public final component1() -> View
+  m public final component2() -> int
+  m public final component3() -> String
+  m public final component4() -> Function0
+  m public final copy(View,int,String,Function0) -> SdkNativeAdPayload
+  m public equals(Object) -> boolean
+  m public final getAdView() -> View
+  m public final getDestroy() -> Function0
+  m public final getPlatform() -> int
+  m public final getTrackingId() -> String
+  m public hashCode() -> int
+  m public toString() -> String
+  f adView : View
+  f destroy : Function0
+  f platform : int
+  f trackingId : String
+
+== com.zjwh.android_wh_physicalfitness.mvi.splash.SplashActivity super=class com.zjwh.android_wh_physicalfitness.common.BaseActivity
+  m public static Oooo0(SplashActivity) -> void
+  m public static Oooo0O0(SplashActivity) -> void
+  m public static Oooo0OO(SplashActivity,View) -> void
+  m public static Oooo0o0(SplashActivity,View) -> void
+  m public static final access$adShowSuccess(SplashActivity) -> void
+  m public static final access$getBinding(SplashActivity) -> ActivitySplashBinding
+  m public static final access$getViewModel(SplashActivity) -> SplashViewModel
+  m public static final access$removeFinishHandler(SplashActivity) -> void
+  m public static final access$startData(SplashActivity) -> void
+  m public static final access$startJump(SplashActivity) -> void
+  m private final native adShowSuccess() -> void
+  m private final native getNet() -> void
+  m private final native getViewModel() -> SplashViewModel
+  m private final native initFinishHandler(int) -> void
+  m private static final native initFinishHandler$lambda$2(SplashActivity) -> void
+  m private static final native initView$lambda$0(SplashActivity,View) -> void
+  m private static final native initView$lambda$1(SplashActivity,View) -> void
+  m private final native loadSplashAd() -> void
+  m private static final native loadSplashAd$lambda$3(SplashActivity) -> void
+  m private final native removeFinishHandler() -> void
+  m private final native requestUserInfo(boolean,String,String,String,String) -> void
+  m private final native splashPv() -> void
+  m private final native startData() -> void
+  m private final native startJump() -> void
+  m public native createStatusBarConfig() -> ImmersionBar
+  m public initData() -> void
+  m public native initView() -> void
+  m public native onCreate(Bundle) -> void
+  m public native onDestroy() -> void
+  m public native onPause() -> void
+  m public native onResume() -> void
+  f agreementDialog : BaseDialog
+  f categoryName : String
+  f finishHandler : o00OO0O0
+  f finishRunnable : Runnable
+  f mExtraData : String
+  f mShortLink : String
+  f viewModel$delegate : OooOO0
+  f Companion : OooO00o
+  f DELAY_TIME : int
+  f PRIVACY_INIT_TAG : String
+
+== com.zjwh.android_wh_physicalfitness.mvi.splash.AdActivity super=class com.zjwh.android_wh_physicalfitness.common.BaseActivity
+  m public static Oooo0(AdActivity) -> void
+  m public static Oooo0O0(AdActivity) -> void
+  m public static final access$getBinding(AdActivity) -> ActivitySplashBinding
+  m public static final access$getDELAY_TIME$p(AdActivity) -> int
+  m public static final access$initDatas(AdActivity) -> void
+  m public static final access$initFinishHandler(AdActivity,int) -> void
+  m public static final access$isLeftActivity$p(AdActivity) -> boolean
+  m public static final access$removeFinishHandler(AdActivity) -> void
+  m public static final access$setAdDismiss$p(AdActivity,boolean) -> void
+  m public static final access$setClicked$p(AdActivity,boolean) -> void
+  m public static final access$startJump(AdActivity) -> void
+  m private final native beiZiCanJump() -> void
+  m private final native getNet() -> void
+  m private final native initDatas() -> void
+  m private final native initFinishHandler(int) -> void
+  m private static final native initFinishHandler$lambda$1(AdActivity) -> void
+  m private final native loadSplashAd() -> void
+  m private static final native loadSplashAd$lambda$0(AdActivity) -> void
+  m private final native removeFinishHandler() -> void
+  m private final native splashPv() -> void
+  m private final native startJump() -> void
+  m public native initData() -> void
+  m public native initView() -> void
+  m public native onDestroy() -> void
+  m public native onKeyDown(int,KeyEvent) -> boolean
+  m public native onNewIntent(Intent) -> void
+  m public native onPause() -> void
+  m public native onResume() -> void
+  f DELAY_TIME : int
+  f canJumpImmediately : boolean
+  f finishHandler : o00OO0O0
+  f finishRunnable : Runnable
+  f isAdDismiss : boolean
+  f isClicked : boolean
+  f isLeftActivity : boolean
+
+== com.zjwh.android_wh_physicalfitness.mvi.home.HomeActivity super=class com.zjwh.android_wh_physicalfitness.common.BaseActivity
+  m public static Oooo0(HomeActivity,View) -> void
+  m public static Oooo0O0(HomeActivity,BaseQuickAdapter,View,int) -> void
+  m public static Oooo0OO(HomeActivity) -> void
+  m public static Oooo0o0(HomeActivity,View) -> void
+  m public static final access$addFragment(HomeActivity,List) -> void
+  m public static final access$buildMergedTabIcons(HomeActivity,IndividuationBottomBean) -> List
+  m public static final access$getBinding(HomeActivity) -> ActivityHomeBinding
+  m public static final access$getChangeCampus$cp() -> MutableLiveData
+  m public static final access$getConstantList$cp() -> List
+  m public static final access$getFirstClickTime$p(HomeActivity) -> long
+  m public static final access$getMAgreeDialog$p(HomeActivity) -> BaseDialog
+  m public static final access$getMList$p(HomeActivity) -> List
+  m public static final access$getMModuleId$p(HomeActivity) -> int
+  m public static final access$getNavigationAdapter$p(HomeActivity) -> NavigationAdapter
+  m public static final access$getPromoPush(HomeActivity) -> void
+  m public static final access$getViewModel(HomeActivity) -> HomeViewModel
+  m public static final access$setFirstClickTime$p(HomeActivity,long) -> void
+  m public static final access$setMModuleId$p(HomeActivity,int) -> void
+  m public static final access$showAgreementDialog(HomeActivity) -> void
+  m public static final access$showHandleNetworkTime(HomeActivity,int) -> void
+  m public static final access$switchFragment(HomeActivity,int) -> void
+  m private final native addFragment(List) -> void
+  m private final native buildMergedTabIcons(IndividuationBottomBean) -> List
+  m private final native collectPendingRouteIntent(Intent) -> void
+  m private final native consumePendingRouteIfAny() -> void
+  m private final getGoJump() -> void
+  m private final native getNetState() -> void
+  m private final native getPromoPush() -> void
+  m private final native getViewModel() -> HomeViewModel
+  m private final native getVipTime() -> long
+  m private static final native initData$lambda$4(HomeActivity,BaseQuickAdapter,View,int) -> void
+  m private final native initViewModelObs() -> void
+  m private final native logout() -> void
+  m private final native refreshCommunityTabIfAccountChanged(boolean) -> void
+  m public static refreshCommunityTabIfAccountChanged$default(HomeActivity,boolean,int,Object) -> void
+  m private final native refreshHomePageData() -> void
+  m private final native showAgreementDialog() -> void
+  m private static final native showAgreementDialog$lambda$28(HomeActivity,View) -> void
+  m private static final native showAgreementDialog$lambda$29(HomeActivity,View) -> void
+  m private final native showHandleNetworkTime(int) -> void
+  m private final native switchFragment(int) -> void
+  m private static final native switchFragment$lambda$7(HomeActivity) -> void
+  m public final native changeTab(MainTabChangeEvt) -> void
+  m public final native handleRunDataChanged(MainDataEvt) -> void
+  m public native initData() -> void
+  m public native initView() -> void
+  m public native onDestroy() -> void
+  m public native onEnterAnimationComplete() -> void
+  m public native onNewIntent(Intent) -> void
+  m public native onResume() -> void
+  m public native onWindowFocusChanged(boolean) -> void
+  f firstClickTime : long
+  f fragmentList : ArrayList
+  f hybridFlutterHost : HybridFlutterHost
+  f isDataChanged : boolean
+  f lastCommunityRefreshUid : int
+  f lastCommunityTabTapMs : long
+  f lastHostBottomTabModuleId : int
+  f mAgreeDialog : BaseDialog
+  f mList : List
+  f mModuleId : int
+  f navigationAdapter : NavigationAdapter
+  f pagerAdapter : FragmentPagerAdapter
+  f pendingPushPayload : String
+  f pendingShortLink : String
+  f viewModel$delegate : OooOO0
+  f vipTime$delegate : OooOO0
+  f COMMUNITY_TAB_DOUBLE_TAP_MS : long
+  f Companion : OooO00o
+  f EXTRA_PUSH_PAYLOAD : String
+  f EXTRA_SHORT_LINK : String
+  f PRIVACY_INIT_TAG : String
+  f changeCampus : MutableLiveData
+  f constantList : List

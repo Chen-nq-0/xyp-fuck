@@ -1,0 +1,16 @@
+# build artifacts
+module/build/
+*.apk
+!apk/*.apk
+*.dex
+*.class
+
+# keys
+*.jks
+*.keystore
+local.properties
+
+# logs / temp
+*.log
+.DS_Store
+Thumbs.db
