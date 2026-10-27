@@ -10,7 +10,7 @@
 |---|---|
 | 目标应用 | `com.zjwh.android_wh_physicalfitness`（运动世界校园） |
 | 目标版本 | 7.3.93（versionCode 407） |
-| 模块版本 | **v17**（53 KB，极限性能版） |
+| 模块版本 | **v17**（53 KB） |
 | 测试环境 | Android 15 x86_64（MuMu 模拟器 + ARM 翻译）/ LSPosed 2.2.1 |
 | 首屏启动 | **1.56–1.60 s**（仅注入空模块的对照组 1.87–2.07 s） |
 
@@ -32,7 +32,7 @@ App 自带广告中台 `com.zjwh.android_wh_physicalfitness.advertise`：
 | `AdPosition` | 12 个广告位（开屏、热开屏、首页原生、插屏×4、跑步记录、游戏视频、天幕悬挂、悦动 banner…） |
 | `AdPlatformType` | ADGAIN / BEIZI / GUANGDIAN / HONGMENG_JINGHONG / LINGYE / MEISHU / TIANMU / XYZ |
 
-v17 只挂 8 + 4 + 1 个门控，全部位于冷启动阶段、调用频率极低，**没有全局热路径 hook**（v13 及以前的 DNS 黑洞、`View.setVisibility`、`addView`、`Dialog.show` 已全部移除）：
+模块只挂 13 个门控，全部位于冷启动阶段、调用频率极低，**没有任何全局热路径 hook**（不拦 DNS、不 hook `View.setVisibility` / `addView` / `Dialog.show`）：
 
 1. `AdvertiseControl.canLoadColdSplash / canLoadHotSplash / canLoadHostHome / canLoadInformationHome / canLoadMine / canLoadReverseHome` → `false`
 2. `AdvertiseControl.requestAdConfig` / `AdManager.requestAdConfig` → 直接返回（不请求广告配置）
@@ -43,15 +43,6 @@ v17 只挂 8 + 4 + 1 个门控，全部位于冷启动阶段、调用频率极�
 7. `SplashActivity.loadSplashAd` → 拦截，并立即 `startJump`
 
 Hook 在 `ContextWrapper.attachBaseContext` 阶段装好（早于 Application.onCreate），因此广告 SDK 连第一次初始化机会都没有。
-
-## 版本演进
-
-| 版本 | 策略 | 首屏 TotalTime | APK |
-|---|---|---|---|
-| v13 | 全局 DNS + 隐藏 View + addView 拦截（兜底层，代价高） | 偏慢（曾出现 30 s 卡顿） | 41 KB |
-| v15 | 关闭广告中台开关（canLoad*） | 1847 / 1797 / 2041 ms | 95 KB |
-| v16 | + 阻止 AdManager.init 与各 Provider.init | 1699 / 1659 / 1721 ms | 95 KB |
-| **v17** | + 移除全部热路径 hook、开屏 500 ms→0 ms、去原生库 | **1602 / 1564 / 1582 / 1584 ms** | **53 KB** |
 
 ## 安装
 
@@ -72,7 +63,11 @@ cd module
 bash build.sh   # 产物 build/module-probe.apk
 ```
 
-详见 [docs/构建说明.md](docs/构建说明.md)。已发布 APK 与源码构建产物 SHA256 一致。
+详见 [docs/构建说明.md](docs/构建说明.md)。已发布 APK 与源码构建产物 SHA256 一致：
+
+```
+fdd4a44e1fea30acfe67bc50550442ef1794860f0bfab56cf2e424eca3948cbf  CampusRunMod-v17.apk
+```
 
 ## 目录
 
